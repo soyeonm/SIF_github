@@ -23,7 +23,7 @@ git lfs install
 
 # Clone the dataset repository from Hugging Face
 git clone https://huggingface.co/datasets/fpss/fphab
-git checkout eb39f81cf2fd041a7035ccfef6885bcd51b6b0cd 
+git checkout sif
 
 # Rename the cloned directory
 mv fphab fpss
