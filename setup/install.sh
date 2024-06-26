@@ -33,3 +33,6 @@ pip install -r requirements.txt
 cd ..
 
 pip install trimesh
+pip install scikit-image
+pip install openai==0.27.4
+pip install retry
