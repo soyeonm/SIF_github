@@ -41,7 +41,7 @@ hydra:
 
 habitat:
   dataset:
-    data_path: data/datasets/apr_23/jsons/s_easy_test_seen_50.json.gz
+    data_path: data/datasets/sif_release/jsons/pnp_test_seen.json.gz
   task:
     save_action_sequences:
       True #False
