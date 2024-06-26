@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import cv2
 
 from envs.utils.fmm_planner import FMMPlanner
 from envs.habitat.eif_env import EIF_Env
