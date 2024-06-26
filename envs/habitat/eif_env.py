@@ -309,7 +309,7 @@ class EIF_Env(habitat.RLEnv):#
 
     #Step functions
 
-    def step_eif(self, action):
+    def step_sif(self, action):
         self._reset_manipulate_info()
         if self.args.replay_fbe_actions_phase:
             obs, done, rew = self.step_fbe(action=None)
