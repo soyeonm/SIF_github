@@ -30,6 +30,8 @@ git clone https://github.com/facebookresearch/Detic.git --recurse-submodules
 cd Detic
 export  Detic_directory=$(pwd)
 pip install -r requirements.txt
+mkdir models
+wget https://dl.fbaipublicfiles.com/detic/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth -O models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth
 cd ..
 
 pip install trimesh
