@@ -1,0 +1,49 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/soyeonm/SIF.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[branch "generate"]
+	remote = origin
+	merge = refs/heads/generate
+[branch "run_from_task_dir"]
+	remote = origin
+	merge = refs/heads/run_from_task_dir
+[branch "generate_apr26"]
+	remote = origin
+	merge = refs/heads/generate_apr26
+[branch "generate_branch_april_26"]
+	remote = origin
+	merge = refs/heads/generate_branch_april_26
+[branch "backup"]
+	remote = origin
+	merge = refs/heads/backup
+[branch "experiment"]
+	remote = origin
+	merge = refs/heads/experiment
+[branch "viz"]
+	remote = origin
+	merge = refs/heads/viz
+[branch "fbe"]
+	remote = origin
+	merge = refs/heads/fbe
+[branch "save_invalid"]
+	remote = origin
+	merge = refs/heads/save_invalid
+[branch "rb"]
+	remote = origin
+	merge = refs/heads/rb
+[branch "rebuttal_save_mask"]
+	remote = origin
+	merge = refs/heads/rebuttal_save_mask
+[branch "cleanup"]
+	remote = origin
+	merge = refs/heads/cleanup
