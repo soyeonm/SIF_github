@@ -40,6 +40,11 @@ git clone https://huggingface.co/datasets/fpss/fphab
 ```
 this line runs in the above file.
 
+
+![Screenshot 2024-06-25 at 9 24 03 PM](https://github.com/soyeonm/SIF_github/assets/77866067/d87f37ff-3b2d-422a-994e-d93b607f94e5)
+
+
+
 This will make your data directory
 ```
 SIF/
