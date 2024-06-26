@@ -30,11 +30,16 @@ sh setup/install.sh
 ```
 
 ## Data Setup
-First, run
+Please have your [huggingface datasets](https://huggingface.co/datasets) username and read token ready. Now, run
 ```
 sh setup/download_data.sh
 ```
-to download SIF data. 
+to download SIF data. You will be prompted to input your hugging face username and read token (as password) when 
+```
+git clone https://huggingface.co/datasets/fpss/fphab
+```
+this line runs in the above file.
+
 This will make your data directory
 ```
 SIF/
