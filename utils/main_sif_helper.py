@@ -290,7 +290,7 @@ def get_tool_policy(args):
 		baseline_type =  'follow_human'
 	elif args.prompter_baseline:
 		from utils.prompter_policy_function import PrompterPolicy
-		tool_policy = PrompterPolicy(llm_type =args.llm_type, host=args.llama_host, baseline_type = baseline_type, teleport=args.teleport_nav, magic_grasp = args.magic_grasp_and_put, add_communication = args.prompter_baseline_with_comm, temp=args.temp, top_p = args.top_p, human_trajectory_index=args.human_trajectory_index, add_human_loc=args.add_human_loc)
+		tool_policy = PrompterPolicy(llm_type =args.llm_type, host=args.llama_host, baseline_type = baseline_type, teleport=args.teleport_nav, magic_grasp = args.magic_grasp_and_put, temp=args.temp, top_p = args.top_p, human_trajectory_index=args.human_trajectory_index, add_human_loc=args.add_human_loc)
 	else:
 		from utils.llm_policy_function import Reasoner 
 		baseline_type = 'reasoning'
