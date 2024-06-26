@@ -48,39 +48,14 @@ SIF/
           ...
 ```
 
-Now, to download object assets and floorplanner scenes, do the following (taken from habitat repo).
-Alternatively, you can also follow the instructions [here](https://github.com/soyeonm/habitat-lab_soyeonm/blob/SIRo/SIRO_README.md).
+Now, to download object assets, do the following (taken from habitat repo).
 
-
-1. Download Floorplanner Scenes:
-```
-# 1. Go to the habitat data directory
-cd habitat-lab/data
-# 2. Install Git LFS from https://git-lfs.com/ (if not installed yet)
-# 3. Set up Git LFS for your user account (if not set up yet)
-git lfs install
-# 4. Clone dataset (it will take a while to finish)
-git clone https://huggingface.co/datasets/fpss/fphab
-# 5. Change the name, and Floorplanner Scenes is ready to use
-mv fphab fpss
-*optionally, you can also do
-ln -s /path/to/fpss/fphab data/fpss
-to create a symlink
-habitat-viewer --enable-physics --dataset /path/to/data/fpss/fphab/fphab.scene_dataset_config.json -- 108294897_176710602.scene_instance.json
-```
-2. Download [Amazon and Google object archives](https://drive.google.com/drive/folders/1x6i3sDYheCWoi59lv27ZyPG4Ii2GhEZB)
-3. Extract these two object datasets into `habitat-lab/data` as follows:
+1. Download [Amazon and Google object archives](https://drive.google.com/drive/folders/1x6i3sDYheCWoi59lv27ZyPG4Ii2GhEZB)
+2. Extract these two object datasets into `habitat-lab/data` as follows:
 ```
 cd objects
 tar -xvf ~/Downloads/google_object_dataset.tar.gz
 tar -xvf ~/Downloads/amazon_berkeley.tar.gz
-```
-4. Download FP episodes:
-```
-# Go to the habitat datasets directory
-cd habitat-lab/data/datasets
-# Clone dataset
-git clone https://github.com/jimmytyyang/floorplanner.git
 ```
 
 You will see your data directory like this:
