@@ -92,7 +92,7 @@ To test that your setup is correct, run
 ```
 export MAGNUM_LOG=quiet   
 export HABITAT_SIM_LOG=quiet 
-python main.py --task_config config/s_obj/val_seen_50.yaml  --print_images 1 --exp_name  test --gt_sem_seg --magic_man_if_exists  --eps_to_run ''  --run_full_task --oracle_baseline
+python main.py --task_config config/s_obj/val_seen.yaml  --print_images 1 --exp_name  test --gt_sem_seg --magic_man_if_exists  --eps_to_run ''  --run_full_task --oracle_baseline
 ```
 and see that it runs. 
 
@@ -113,7 +113,7 @@ For running inference with Reasoner, with OpenAI API:
 ```
 export MAGNUM_LOG=quiet   
 export HABITAT_SIM_LOG=quiet 
-HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen_50.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task 
+HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task 
 ```
 
 Argument explanation: 
@@ -136,7 +136,7 @@ e.g.
 ```
 export MAGNUM_LOG=quiet   
 export HABITAT_SIM_LOG=quiet 
-HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen_50.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task --prompter_baseline
+HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task --prompter_baseline
 ```
 
 To run with oracle policy, add "--oracle_baseline".
