@@ -24,7 +24,7 @@ conda activate sif_env
 
 git clone https://github.com/soyeonm/SIF_github.git
 export HOME_DIR=$(pwd)
-cd sif_github
+cd SIF_github
 export SIF_DIR=$(pwd)
 sh setup/install.sh
 ```
