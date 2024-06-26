@@ -22,7 +22,7 @@ Please run
 conda create -n sif_env python=3.9 cmake=3.14.0 -y
 conda activate sif_env
 
-git clone https://github.com/soyeonm/sif_github.git
+git clone https://github.com/soyeonm/SIF_github.git
 export HOME_DIR=$(pwd)
 cd sif_github
 export SIF_DIR=$(pwd)
