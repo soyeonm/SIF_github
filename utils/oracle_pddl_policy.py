@@ -76,7 +76,7 @@ class OraclePDDLPolicy(HeuristicPolicyVer1):
 			return self.last_return_dict
 
 		if input_dict['task_phase']:
-			timeout = (not(self.teleport) and input_dict['time'] >= self.end_time) or (self.teleport and input_dict['execute_count'] >= self.execution_end_time)
+			timeout = input_dict['time'] >= self.end_time
 			whether_execute = self.decide_whether_execute(input_dict)
 
 			if whether_execute:
