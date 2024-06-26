@@ -112,6 +112,8 @@ Argument explanation:
 
 --task_config: The config to use. 
 
+--exp_name: The saving directory of model output ("tmp/dump/exp_name").
+
 --llm_type: LLM used for inference (openai/ openai_chat). Use openai for Reasoner and openai_chat for prompter.
 
 --print_images: Show image visualization. 
@@ -128,6 +130,11 @@ HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen_
 ```
 
 To run with oracle policy, add "--oracle_baseline".
+
+Logs and visualiations are saved to "tmp/dump/exp_name":
+![Vis-0208](https://github.com/soyeonm/SIF_github/assets/77866067/e3a5a703-0fe1-4ce7-9d75-b4e2a099be81)
+
+
 
 
 ## Acknowledgements
