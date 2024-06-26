@@ -209,14 +209,13 @@ def construct_envs(
 
     :return: VectorEnv object created according to specification.
     """
-    config = cfg_env(config_path=args.task_config, configs_dir='config')  #cfg_env('../habitat-lab_soyeonm/habitat-baselines/habitat_baselines/config/' +  args.task_config) #cfg_env('../habitat-lab_soyeonm/habitat-baselines/habitat_baselines/config/' +  args.task_config)
+    config = cfg_env(config_path=args.task_config, configs_dir='/home/soyeonm/reproduce_sitAI/SIF_github')  
     #Overwrite args into config
     if OmegaConf.is_readonly(config):
         OmegaConf.set_readonly(config, False)
     config = overwirte_args_yaml(args, config)
     config.habitat.simulator.turn_angle = 30
-    #breakpoint() #ang_speed set to 20 * 3 (20 was for 10 degrees)
-    config.habitat.task.actions.agent_0_base_velocity.ang_speed = 60 #20 * 3
+    config.habitat.task.actions.agent_0_base_velocity.ang_speed = 60 
 
     #Video option
     n_agents = len(config.habitat.simulator.agents)
@@ -330,9 +329,6 @@ def construct_envs(
                 
 
         configs.append(proc_config)
-    #import ipdb; ipdb.set_trace()
-    #breakpoint()
-    #configs[0].habitat.dataset.scenes_episodes# ['12', '8', '9', '16', '27', '26', '33', '2', '30', '15']
 
 
     vector_env_cls: Type[Any]
@@ -344,10 +340,9 @@ def construct_envs(
     else:
         vector_env_cls = VectorEnv
     vector_env_cls = ThreadedVectorEnv
-    #breakpoint()
+
     envs = vector_env_cls(
         make_env_fn=make_gym_from_config,
-        #make_env_fn=make_env_fn,
         env_fn_args=tuple((args, c, rank) for rank, c in enumerate(configs)),
         workers_ignore_signals=workers_ignore_signals,
     )
