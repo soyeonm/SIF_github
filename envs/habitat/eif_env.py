@@ -309,7 +309,7 @@ class EIF_Env(habitat.RLEnv):#
 
     #Step functions
 
-    def step(self, action):
+    def step_eif(self, action):
         self._reset_manipulate_info()
         if self.args.replay_fbe_actions_phase:
             obs, done, rew = self.step_fbe(action=None)
@@ -338,7 +338,7 @@ class EIF_Env(habitat.RLEnv):#
             elif ('agent_0_search' in action['action_args']) or ('agent_0_just_rotate' in action['action_args']):
                 obs, rew, done = self._step_search_rotate(action)
             else:
-                obs, rew, done, _ = super().step(action)
+                obs, rew, done, _ = self.step(action)
         except:
             breakpoint()
         return obs, rew, done

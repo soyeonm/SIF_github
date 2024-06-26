@@ -87,7 +87,7 @@ class SIF_Agent(EIF_Env):
 		if not(task_stop):
 			# act
 			self.reset_intermediate_stops()
-			obs, rew, done, self.info = super().step(action)
+			obs, rew, done, self.info = self.step_eif(action)
 			obs = self.perception.preprocess_obs(obs, self.sem_seg)  
 
 			#	Postproces and update
