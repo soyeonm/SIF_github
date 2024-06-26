@@ -31,3 +31,5 @@ cd Detic
 export  Detic_directory=$(pwd)
 pip install -r requirements.txt
 cd ..
+
+pip install trimesh
