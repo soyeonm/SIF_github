@@ -209,7 +209,7 @@ def construct_envs(
 
     :return: VectorEnv object created according to specification.
     """
-    config = cfg_env(config_path=args.task_config, configs_dir='/home/soyeonm/reproduce_sitAI/SIF_github')  
+    config = cfg_env(config_path=args.task_config, configs_dir='config')  
     #Overwrite args into config
     if OmegaConf.is_readonly(config):
         OmegaConf.set_readonly(config, False)
