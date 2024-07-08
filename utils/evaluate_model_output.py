@@ -28,5 +28,5 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 	#spl_list[int(eps_num.replace('eps_', ''))] = spl
 	total_count +=1
 
-breakpoint()
+print("SR is ", np.mean(list(success_list.values())))
 #data/datasets/sif_release
