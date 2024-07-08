@@ -28,5 +28,30 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 	#spl_list[int(eps_num.replace('eps_', ''))] = spl
 	total_count +=1
 
+
+task_json_path = 'data/datasets/apr_23/jsons/' +  args.json_name +  '.json.gz' #e.g. 
+with gzip.open(task_json_path, 'rb') as f:
+	data = f.read()
+	# Decode the bytes object to string
+	json_str = data.decode('utf-8')
+	# Parse the JSON data
+	task_json_data = json.loads(json_str)
+
+amb_success_list = []
+for ep_idx, episode in enumerate(task_json_data['episodes']):
+	if ep_idx in indices_to_include:
+		ambiguous = episode['sif_params']['ambiguous']
+		success = success_list[ep_idx] 
+		spl = spl_list[ep_idx] 
+		if ambiguous:
+			amb_success_list.append(success)
+			#amb_spl_list.append(spl)
+			#amb_idxes.append(ep_idx)
+
+
+
+#Just see for ambiguous  episodes
 print("SR is ", np.mean(list(success_list.values())))
+print("AMB SR is ", np.mean(amb_success_list))
+print("Amb len ", len(amb_success_list))
 #data/datasets/sif_release
