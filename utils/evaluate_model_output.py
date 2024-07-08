@@ -14,12 +14,12 @@ args = parser.parse_args()
 #Just get SR
 #Only need exp_name for this 
 
-tmp_dump_eval_path = 'tmp/dump/' + args.tmp_dump_name + '/episodes/thread_0'
+exp_result_path = 'tmp/dump/' + args.exp_name + '/episodes/thread_0'
 success_list = {}
 spl_list = {}
 total_count = 0
 from glob import glob
-for eval_path in glob(tmp_dump_eval_path + '/eps_*/eval_result.p'):
+for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 	eval_result = pickle.load(open(eval_path, 'rb'))
 	model_output = pickle.load(open(eval_path.replace('eval_result.p', 'model_output.p') , 'rb'))
 	eps_num = eval_path.split('/')[-2]
@@ -30,3 +30,4 @@ for eval_path in glob(tmp_dump_eval_path + '/eps_*/eval_result.p'):
 		total_count +=1
 
 breakpoint()
+#data/datasets/sif_release
