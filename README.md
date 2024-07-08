@@ -4,7 +4,7 @@
 So Yeon Min, Xavi Puig, Devendra Singh Chaplot, Tsung-Yen Yang, Akshara Rai, Priyam Parashar, Ruslan Salakhutdinov, Yonatan Bisk, and Roozbeh Mottaghi<br />
 Carnegie Mellon University, FAIR (Meta)
 
-<img src="https://github.com/soyeonm/SIF_github/assets/77866067/232fbced-b55b-48e7-aa63-ae78c159c280" alt="alt text" width="600" >
+![sif_gif_pdf_pngs](https://github.com/soyeonm/SIF_github/assets/77866067/7691b5ed-0a4c-432d-a876-4da8f3892f3e)
 
 [Project Webpage](https://soyeonm.github.io/SIF_webpage/)
 
