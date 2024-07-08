@@ -29,7 +29,7 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 	total_count +=1
 
 
-task_json_path = 'data/datasets/apr_23/jsons/' +  args.json_name +  '.json.gz' #e.g. 
+task_json_path = 'data/datasets/sif_release/jsons/' +  args.json_name +  '.json.gz' #e.g. 
 with gzip.open(task_json_path, 'rb') as f:
 	data = f.read()
 	# Decode the bytes object to string
@@ -54,4 +54,3 @@ for ep_idx, episode in enumerate(task_json_data['episodes']):
 print("SR is ", np.mean(list(success_list.values())))
 print("AMB SR is ", np.mean(amb_success_list))
 print("Amb len ", len(amb_success_list))
-#data/datasets/sif_release
