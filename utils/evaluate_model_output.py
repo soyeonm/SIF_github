@@ -38,6 +38,7 @@ with gzip.open(task_json_path, 'rb') as f:
 	task_json_data = json.loads(json_str)
 
 amb_success_list = []
+amb_fail_idxes = []
 for ep_idx, episode in enumerate(task_json_data['episodes']):
 	ambiguous = episode['sif_params']['ambiguous']
 	success = success_list[ep_idx] 
@@ -46,6 +47,8 @@ for ep_idx, episode in enumerate(task_json_data['episodes']):
 		amb_success_list.append(success)
 		#amb_spl_list.append(spl)
 		#amb_idxes.append(ep_idx)
+	else:
+		amb_fail_idxes.append(ep_idx)
 
 
 
@@ -53,3 +56,4 @@ for ep_idx, episode in enumerate(task_json_data['episodes']):
 print("SR is ", np.mean(list(success_list.values())))
 print("AMB SR is ", np.mean(amb_success_list))
 print("Amb len ", len(amb_success_list))
+print(amb_fail_idxes)
