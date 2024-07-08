@@ -39,14 +39,13 @@ with gzip.open(task_json_path, 'rb') as f:
 
 amb_success_list = []
 for ep_idx, episode in enumerate(task_json_data['episodes']):
-	if ep_idx in indices_to_include:
-		ambiguous = episode['sif_params']['ambiguous']
-		success = success_list[ep_idx] 
-		spl = spl_list[ep_idx] 
-		if ambiguous:
-			amb_success_list.append(success)
-			#amb_spl_list.append(spl)
-			#amb_idxes.append(ep_idx)
+	ambiguous = episode['sif_params']['ambiguous']
+	success = success_list[ep_idx] 
+	#spl = spl_list[ep_idx] 
+	if ambiguous:
+		amb_success_list.append(success)
+		#amb_spl_list.append(spl)
+		#amb_idxes.append(ep_idx)
 
 
 
