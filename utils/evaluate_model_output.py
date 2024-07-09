@@ -47,8 +47,8 @@ for ep_idx, episode in enumerate(task_json_data['episodes']):
 		amb_success_list.append(success)
 		#amb_spl_list.append(spl)
 		#amb_idxes.append(ep_idx)
-	else:
-		amb_fail_idxes.append(ep_idx)
+		if not (success):
+			amb_fail_idxes.append(ep_idx)
 
 
 
