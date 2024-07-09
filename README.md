@@ -4,6 +4,8 @@
 So Yeon Min, Xavi Puig, Devendra Singh Chaplot, Tsung-Yen Yang, Akshara Rai, Priyam Parashar, Ruslan Salakhutdinov, Yonatan Bisk, and Roozbeh Mottaghi<br />
 Carnegie Mellon University, FAIR (Meta)
 
+**In proceedings of ECCV 2024 **
+
 ![sif_gif_pdf_pngs](https://github.com/soyeonm/SIF_github/assets/77866067/7691b5ed-0a4c-432d-a876-4da8f3892f3e)
 
 [Project Webpage](https://soyeonm.github.io/SIF_webpage/)
