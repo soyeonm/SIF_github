@@ -21,6 +21,7 @@ class Reasoner(HeuristicPolicyVer1):
 		self.teleport = teleport
 		self.execution_end_time = 15 #3 #15
 		self.llm_type = llm_type
+		breakpoint()
 		if llm_type == 'replay':
 			raise Exception("LLM Type replay")
 		elif llm_type=='openai':
