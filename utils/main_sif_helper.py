@@ -294,7 +294,7 @@ def get_tool_policy(args):
 	else:
 		from utils.llm_policy_function import Reasoner 
 		baseline_type = 'reasoning'
-		tool_policy = Reasoner(llm_type =args.llm_type, host=args.llama_host, baseline_type = baseline_type, teleport=args.teleport_nav, magic_grasp = args.magic_grasp_and_put, human_recep_no_put=args.human_recep_no_put) #HeuristicPolicyVer1()
+		tool_policy = Reasoner(llm_type ='openai_chat', host=args.llama_host, baseline_type = baseline_type, teleport=args.teleport_nav, magic_grasp = args.magic_grasp_and_put, human_recep_no_put=args.human_recep_no_put) #HeuristicPolicyVer1()
 
 	return tool_policy, baseline_type
 
