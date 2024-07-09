@@ -56,4 +56,4 @@ for ep_idx, episode in enumerate(task_json_data['episodes']):
 print("SR is ", np.mean(list(success_list.values())))
 # print("AMB SR is ", np.mean(amb_success_list))
 # print("Amb len ", len(amb_success_list))
-print(amb_fail_idxes)
+#print(amb_fail_idxes)
