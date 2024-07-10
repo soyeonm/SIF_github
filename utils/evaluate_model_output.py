@@ -36,6 +36,7 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 #Just see for ambiguous  episodes
 print("SR is ", np.mean(list(success_list.values())))
 print("SPL is ", np.mean(list(spl_list.values())))
+print("# Tasks ran: ", len(list(success_list.values())))
 
 # print("AMB SR is ", np.mean(amb_success_list))
 # print("Amb len ", len(amb_success_list))
