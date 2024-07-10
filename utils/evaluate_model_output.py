@@ -58,6 +58,14 @@ if args.get_amb_clear:
 	clear_idxes = []
 	amb_idxes = []
 
+	task_json_path = 'data/datasets/apr_23/jsons/' +  args.json_name +  '.json.gz' #e.g. 
+	with gzip.open(task_json_path, 'rb') as f:
+		data = f.read()
+		# Decode the bytes object to string
+		json_str = data.decode('utf-8')
+		# Parse the JSON data
+		task_json_data = json.loads(json_str)
+
 	for ep_idx, episode in enumerate(task_json_data['episodes']):
 		if ep_idx in indices_to_include:
 			ambiguous = episode['sif_params']['ambiguous']
