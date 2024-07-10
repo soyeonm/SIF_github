@@ -320,14 +320,13 @@ class Visualizer:
 				else:
 					raise Exception("What phase is this")
 
-				if args.task_phase:
-					os_f = '{}/episodes/eps_{}/{}'.format(
-						dump_dir, episode_id, folder_name)
-					if not(os.path.exists(os_f)):
-						os.makedirs(os_f)
+				os_f = '{}/episodes/eps_{}/{}'.format(
+					dump_dir, episode_id, folder_name)
+				if not(os.path.exists(os_f)):
+					os.makedirs(os_f)
 
-					fn = '{}/episodes/eps_{}/{}/Vis-{:04d}.png'.format(
-						dump_dir, episode_id, folder_name,timestep)
+				fn = '{}/episodes/eps_{}/{}/Vis-{:04d}.png'.format(
+					dump_dir, episode_id, folder_name,timestep)
 
 
 		
