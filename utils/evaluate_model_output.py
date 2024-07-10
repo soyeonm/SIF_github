@@ -61,4 +61,4 @@ fail_idx = []
 for k, v in success_list.items():
 	if not(v):
 		fail_idx.append(v)
-print("Failed idxes are ", v)
+print("Failed idxes are ", fail_idx)
