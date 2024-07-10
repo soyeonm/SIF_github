@@ -60,5 +60,5 @@ print("SR is ", np.mean(list(success_list.values())))
 fail_idx = []
 for k, v in success_list.items():
 	if not(v):
-		fail_idx.append(v)
+		fail_idx.append(k)
 print("Failed idxes are ", fail_idx)
