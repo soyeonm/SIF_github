@@ -81,7 +81,6 @@ class SIF_Agent(EIF_Env):
 		#early stop if follow human unnecessarily
 		if self.args.task_phase:
 			if planner_inputs['cur_tools']['hl_tool'] == 'follow_human' and self.timestep >=50 and self._env._sim.get_agent_data(0).articulated_agent._sim.ep_info.sif_params['ambiguous'] == False:
-				breakpoint()
 				task_stop = True
 
 		if (self.info['ignore_cur_ep']) and self.timestep >=1:
