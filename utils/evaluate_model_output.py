@@ -57,3 +57,8 @@ print("SR is ", np.mean(list(success_list.values())))
 # print("AMB SR is ", np.mean(amb_success_list))
 # print("Amb len ", len(amb_success_list))
 #print(amb_fail_idxes)
+fail_idx = []
+for k, v in success_list.items():
+	if not(v):
+		fail_idx.append(v)
+print("Failed idxes are ", v)
