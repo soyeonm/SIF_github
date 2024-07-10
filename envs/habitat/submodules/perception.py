@@ -329,6 +329,6 @@ class Visualizer:
 					dump_dir, episode_id, folder_name,timestep)
 
 
-		
-			cv2.imwrite(fn, cv2.resize(self.vis_image, (583, 310)))
+			if args.task_phase:		
+				cv2.imwrite(fn, cv2.resize(self.vis_image, (583, 310)))
 
