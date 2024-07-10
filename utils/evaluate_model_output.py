@@ -26,7 +26,7 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 	eval_result = pickle.load(open(eval_path, 'rb'))
 	model_output = pickle.load(open(eval_path.replace('eval_result.p', 'model_output.p') , 'rb'))
 	eps_num = eval_path.split('/')[-2]
-	spl = eval_result * oracle_path_len [eps_num] / max(model_output['steps_taken'], oracle_path_len [eps_num])
+	spl = eval_result * oracle_path_len [eps_num] / max(model_output['steps_taken'], oracle_path_len[int(eps_num.replace('eps_', ''))])
 	success_list[int(eps_num.replace('eps_', ''))] = eval_result
 	spl_list[int(eps_num.replace('eps_', ''))] = spl
 	total_count +=1
