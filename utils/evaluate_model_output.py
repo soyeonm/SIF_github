@@ -58,7 +58,7 @@ if args.get_amb_clear:
 	clear_idxes = []
 	amb_idxes = []
 
-	task_json_path = 'data/datasets/apr_23/jsons/' +  args.json_name +  '.json.gz' #e.g. 
+	task_json_path = 'data/datasets/sif_release/jsons/' +  args.json_name +  '.json.gz' #e.g. 
 	with gzip.open(task_json_path, 'rb') as f:
 		data = f.read()
 		# Decode the bytes object to string
