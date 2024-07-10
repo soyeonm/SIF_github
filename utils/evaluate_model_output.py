@@ -61,24 +61,21 @@ if args.get_amb_clear:
 	task_json_path = 'data/datasets/sif_release/jsons/' +  args.json_name +  '.json.gz' #e.g. 
 	with gzip.open(task_json_path, 'rb') as f:
 		data = f.read()
-		# Decode the bytes object to string
 		json_str = data.decode('utf-8')
-		# Parse the JSON data
 		task_json_data = json.loads(json_str)
 
 	for ep_idx, episode in enumerate(task_json_data['episodes']):
-		if ep_idx in indices_to_include:
-			ambiguous = episode['sif_params']['ambiguous']
-			success = success_list[ep_idx] 
-			spl = spl_list[ep_idx] 
-			if ambiguous:
-				amb_success_list.append(success)
-				amb_spl_list.append(spl)
-				amb_idxes.append(ep_idx)
-			else:
-				clear_success_list.append(success)
-				clear_spl_list.append(spl)
-				clear_idxes.append(ep_idx)
+		ambiguous = episode['sif_params']['ambiguous']
+		success = success_list[ep_idx] 
+		spl = spl_list[ep_idx] 
+		if ambiguous:
+			amb_success_list.append(success)
+			amb_spl_list.append(spl)
+			amb_idxes.append(ep_idx)
+		else:
+			clear_success_list.append(success)
+			clear_spl_list.append(spl)
+			clear_idxes.append(ep_idx)
 
 	print("amb + clear len ", len(amb_success_list + clear_success_list))
 
