@@ -12,8 +12,6 @@ parser.add_argument('--json_name',  type=str, required=True)
 parser.add_argument('--get_amb_clear', action='store_true', default=False)
 args = parser.parse_args()
 
-#Just get SR
-#Only need exp_name for this 
 
 exp_result_path = 'tmp/dump/' + args.exp_name + '/episodes/thread_0'
 success_list = {}
@@ -34,14 +32,11 @@ for eval_path in glob(exp_result_path + '/eps_*/eval_result.p'):
 
 
 
-#Just see for ambiguous  episodes
 print("SR is ", np.mean(list(success_list.values())))
 print("SPL is ", np.mean(list(spl_list.values())))
 print("# Tasks ran: ", len(list(success_list.values())))
 
-# print("AMB SR is ", np.mean(amb_success_list))
-# print("Amb len ", len(amb_success_list))
-#print(amb_fail_idxes)
+
 fail_idx = []
 for k, v in success_list.items():
 	if not(v):

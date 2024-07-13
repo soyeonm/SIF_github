@@ -309,7 +309,7 @@ class Visualizer:
 		cv2.drawContours(self.vis_image, [agent_arrow], 0, color, -1)
 
 
-		if args.print_images: # and not(ignore_cases):
+		if args.print_images: 
 			if args.run_full_task:
 				if args.replay_fbe_actions_phase:
 					folder_name = 'replay_fbe_phase'
@@ -329,6 +329,6 @@ class Visualizer:
 					dump_dir, episode_id, folder_name,timestep)
 
 
-			if args.task_phase:		
-				cv2.imwrite(fn, cv2.resize(self.vis_image, (583, 310)))
+			#if args.task_phase:		
+			cv2.imwrite(fn, cv2.resize(self.vis_image, (583, 310)))
 
