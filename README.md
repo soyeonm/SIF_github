@@ -116,7 +116,7 @@ For running inference with Reasoner, with OpenAI API:
 export Detic_directory=$HOME_DIR/Detic
 export MAGNUM_LOG=quiet   
 export HABITAT_SIM_LOG=quiet 
-HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task 
+HABITAT_SIM_LOG=quiet python main.py --task_config config/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj  --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task 
 ```
 
 Argument explanation: 
@@ -140,7 +140,7 @@ e.g.
 export Detic_directory=$HOME_DIR/Detic
 export MAGNUM_LOG=quiet   
 export HABITAT_SIM_LOG=quiet 
-HABITAT_SIM_LOG=quiet python main.py --task_config config/june_3/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj --llm_type openai --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task --prompter_baseline
+HABITAT_SIM_LOG=quiet python main.py --task_config config/s_obj/val_seen.yaml  --print_images 1 --exp_name reasoner_vs_s_obj  --gt_sem_seg --magic_man_if_exists    --eps_to_run ''  --run_full_task --prompter_baseline
 ```
 
 To run with oracle policy, add "--oracle_baseline".
@@ -148,7 +148,15 @@ To run with oracle policy, add "--oracle_baseline".
 Logs and visualiations are saved to "tmp/dump/exp_name":
 ![Vis-0208](https://github.com/soyeonm/SIF_github/assets/77866067/e3a5a703-0fe1-4ce7-9d75-b4e2a099be81)
 
+### Obtain SR/ SPL from your runs
 
+For the example command above,
+
+Run 
+```
+python utils/evaluate_model_output.py --exp_name reasoner_vs_s_obj   --json_name  s_obj_val_seen
+```
+to obtain the SR/ SPL. Add flag "--get_amb_clear" to see results by clear/ ambiguous tasks. The "--json_name" can be accessed by looking at the "data_path" of the config file you used (e.g. config/s_obj/val_seen.yaml).
 
 
 ## Acknowledgements
